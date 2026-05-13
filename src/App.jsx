@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import Compras from './paginas/Compras'
 import Login from './paginas/Login'
-import Cadastro from './paginas/Cadastro'
-import Usuarios from './paginas/Usuarios'
+
 
 
 function App() {
@@ -14,23 +14,18 @@ function App() {
 
   const renderizar = () => {
     if (tela === 'login') {
-      return <Login/>
-    } else if (tela === 'cadastro') {
-      return <Cadastro/>
-    } else if (tela === 'usuarios') {
-      return <Usuarios/>
-    } else {
-      return <Login/>
+      return <Login />
+    } else if (tela === 'compras') {
+      return <Compras />
     }
   }
 
   return (
     <>
-      <button onClick={() => trocarDeTela('cadastro')}>Cadastro</button>
-      <button onClick={() => trocarDeTela('login')}>Login</button>
-      <button onClick={() => trocarDeTela('usuarios')}>Usuarios</button>
-      
 
+      <button onClick={() => trocarDeTela('login')}>Login</button>
+      <button onClick={() => trocarDeTela('compras')}>Compras</button>
+      
       <hr />
 
       {renderizar()}
