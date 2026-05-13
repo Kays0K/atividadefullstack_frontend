@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
-export default function Compras() {
+export default function Produtos() {
     useEffect(() => {
         const fetchData = async () => {
             
-                const response = await fetch('http://localhost:3000/compras');
+                const response = await fetch('http://localhost:3000/estoque');
                 const data = await response.json();
-                console.log("Compras:", data);
+                console.log("Produtos:", data);
             
         };
 
@@ -15,7 +15,7 @@ export default function Compras() {
 
     return (
         <div>
-            <h1>Compras</h1>
+            <h1>Produtos</h1>
         </div>
     );
 }
